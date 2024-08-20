@@ -1,0 +1,157 @@
+
+
+:root{
+    --black: #0F0F0F;
+    --white:#fff;
+    --dark-white:#ccc;
+    --grey:#353535;
+    --disabled-grey:#222222;
+    --green:#42CC57;
+    --dark-green:#182E1C;
+    --red:#FF352C;
+    --dark-red:#351614;
+    --blue:#2c79ff;
+    --dark-blue:#111c2e;
+}
+
+*{
+    font-family: "Roboto Mono", monospace;
+}
+  
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--black);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}  
+
+
+/* Scroll bars */
+/* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
+/** {
+  scrollbar-width: thin;
+  scrollbar-color: #222831 #DFE9EB;
+}*/
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+  }
+  *::-webkit-scrollbar-track {
+    border-radius: 20px;
+    background-color: var(--white);
+  }
+  
+  *::-webkit-scrollbar-track:hover {
+    background-color: var(--dark-white);
+  }
+  
+  *::-webkit-scrollbar-track:active {
+    background-color: var(--dark-white);
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: var(--disabled-grey);
+  }
+  
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: var(--grey);
+  }
+  
+  *::-webkit-scrollbar-thumb:active {
+    background-color: var(--grey);
+  }
+  
+
+.stopwatch{
+    display: flex;
+    flex-direction: column;
+}
+
+.display h1{
+    font-size: 9em;
+    font-weight: 400;
+}
+
+.controls{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Buttons */
+.controls button{
+    padding: 3em;
+    border-radius: 100%;
+    font-size: 1em;
+    font-weight: 600;
+    border: 2px solid var(--black);
+    cursor: pointer;
+    transition: all 0.3 ease;
+    max-width: 125.297px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+.lap-btn{
+    background-color: var(--disabled-grey);
+    outline: 2px solid var(--disabled-grey);
+    color: #484848  ;
+}
+
+.lap-btn.isRunning{
+    background-color: var(--grey);
+    outline: 2px solid var(--grey);
+    color: var(--white);
+}
+
+.start-btn{
+    background-color: var(--dark-green);
+    outline: 2px solid var(--dark-green);
+    color: var(--green);
+}
+
+.start-btn.isRunning{
+    background-color: var(--dark-red);
+    outline: 2px solid var(--dark-red);
+    color: var(--red);
+}
+
+.reset-btn{
+    background-color: var(--dark-blue);
+    outline: 2px solid var(--dark-blue);
+    color: var(--blue);
+}
+
+ /* Laps */
+
+.laps-display{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    padding-top: 1em;
+    overflow: hidden auto;
+
+}
+
+.lap{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    border-bottom: 2px solid var(--disabled-grey);
+    color: var(--dark-white);
+}
+
+.lap h2{
+    font-weight: 300;
+}
